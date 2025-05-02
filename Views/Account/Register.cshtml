@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "Register";
+}
+<h2>Register</h2>
+<form method="post" asp-action="Register">
+    <input type="text" name="username" placeholder="Username" required /><br />
+    <input type="password" name="password" placeholder="Password" required /><br />
+    <select name="role">
+        <option value="Tourist">Tourist</option>
+        <option value="TravelAgency">Travel Agency</option>
+        <option value="TourGuide">Tour Guide</option>
+    </select><br />
+    <button type="submit">Register</button>
+</form>

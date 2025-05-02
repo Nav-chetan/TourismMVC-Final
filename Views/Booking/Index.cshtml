@@ -1,0 +1,6 @@
+@model IEnumerable<TourismMVC.Models.Booking>
+<h2>Your Bookings</h2>
+@foreach (var booking in Model)
+{
+    <p>Tour ID: @booking.TourId — Status: @booking.Status</p>
+}

@@ -1,0 +1,15 @@
+@model IEnumerable<TourismMVC.Models.Tour>
+
+<h2>Available Tours</h2>
+@foreach (var tour in Model)
+{
+    <div>
+        <h3>@tour.Title</h3>
+        <p>@tour.Description</p>
+        <p>@tour.Price</p>
+        <form method="post" asp-controller="Booking" asp-action="Book">
+            <input type="hidden" name="tourId" value="@tour.Id" />
+            <button type="submit">Book Tour</button>
+        </form>
+    </div>
+}
